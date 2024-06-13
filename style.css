@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url('gradient-background.webp') no-repeat center center fixed; /* Use the gradient image */
+    background-size: cover; /* Ensure the background covers the whole viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: rgba(50, 50, 50, 0.9); /* Dark grey with some transparency */
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    width: 90%; /* Increased width */
+    max-width: 800px; /* Increased max width */
+    padding: 30px; /* Increased padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer {
+    font-size: 5rem; /* Increased font size */
+    color: #f0f0f0; /* Lighter grey for text */
+    text-align: center;
+    margin-bottom: 30px; /* Increased margin */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Slight shadow for readability */
+}
+
+.bottomPart {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px; /* Increased margin */
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px; /* Increased space between buttons */
+}
+
+.btns button {
+    width: 90px; /* Increased button width */
+    height: 90px; /* Increased button height */
+    background: linear-gradient(145deg, #3a3a3a, #4a4a4a); /* Gradient from darker to lighter grey */
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btns button:hover {
+    transform: translateY(-5px);
+}
+
+.btns .toggle {
+    background: linear-gradient(145deg, #4a4a4a, #5a5a5a); /* Slightly different gradient */
+}
+
+.btns .toggle.on {
+    background: linear-gradient(145deg, #d92027, #e94545); /* Red gradient for stop */
+}
+
+.btns .reset {
+    background: linear-gradient(145deg, #666666, #777777); /* Medium grey */
+}
+
+.btns .lap {
+    background: linear-gradient(145deg, #525252, #626262); /* Darker grey */
+}
+
+.lap_box {
+    margin-top: 30px; /* Increased margin */
+    width: 100%; /* Match width of container */
+    max-height: 400px; /* Increased max height */
+    color: #f0f0f0; /* Lighter grey for text */
+    overflow-y: auto;
+    padding: 20px; /* Increased padding */
+    border-radius: 10px;
+    background: rgba(30, 30, 30, 0.8); /* Darker grey background */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.lap_box::-webkit-scrollbar {
+    width: 6px;
+}
+
+.lap_box::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.lapItem {
+    width: 100%;
+    padding: 10px; /* Increased padding */
+    background: rgba(80, 80, 80, 0.7); /* Medium dark grey */
+    border-radius: 5px;
+    margin-bottom: 10px; /* Space between lap items */
+    text-align: left; /* Align text to the left */
+    font-size: 1.2rem; /* Increased font size */
+}
